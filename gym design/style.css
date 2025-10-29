@@ -1,0 +1,235 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #111;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1c1c1c;
+  padding: 20px 40px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.8rem;
+  color: #ff5733;
+  font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: #ff5733;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Hero */
+.hero {
+  background: url("gym-1.jpg") center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  color: #ff5733;
+  margin-bottom: 15px;
+}
+
+.btn {
+  background: #ff5733;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ff784e;
+  transform: scale(1.05);
+}
+
+/* Sections */
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* About */
+.about p {
+  max-width: 800px;
+  margin: 20px auto;
+  line-height: 1.7;
+  color: #ddd;
+}
+
+.about-stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.about-stats div h3 {
+  color: #ff5733;
+  font-size: 2rem;
+}
+
+/* Services */
+.service-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.service-card {
+  background: #222;
+  padding: 25px;
+  border-radius: 12px;
+  width: 280px;
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+}
+
+.price {
+  color: #ff5733;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+/* Trainers */
+.trainer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.trainer-card {
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  width: 260px;
+  transition: 0.3s;
+  object-fit: cover;
+}
+
+.trainer-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.trainer-card:hover {
+  transform: scale(1.05);
+}
+
+/* Contact */
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 450px;
+  margin: 30px auto;
+}
+
+.contact input,
+.contact textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+}
+
+.contact textarea {
+  height: 100px;
+}
+
+/* Footer */
+footer {
+  background: #1c1c1c;
+  padding: 30px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.footer-links a {
+  color: #ff5733;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #222;
+    width: 200px;
+    padding: 20px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .about-stats {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .service-container, .trainer-container {
+    flex-direction: column;
+  }
+}
